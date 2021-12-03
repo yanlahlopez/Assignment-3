@@ -1,13 +1,18 @@
 import math
 
-apple = int(input("How many apples do you want? "))
-orange = int(input("How many oranges do you want? "))
+def aprice():
+  apple = int(input("How many apples do you want? "))
+  return apple
+  
+def oprice():  
+  orange = int(input("How many oranges do you want? "))
+  return orange
 
-appleprice = 20
-orangeprice = 25
+appleprice = 20 * aprice()
+orangeprice = 25 * oprice()
 
-appletotal = apple * appleprice
-orangetotal = orange * orangeprice
+def aototal():
+  total = appleprice + orangeprice
+  return total
 
-total = appletotal + orangetotal
-print(f"The total amount is {total}")
+print(f"The total amount is {aototal()}")
